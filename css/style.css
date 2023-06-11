@@ -1,0 +1,755 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+h1,h2,h3{
+    font-family: 'algerian';
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+nav{
+    width: 100%;
+    border-bottom: 1px solid rgb(187, 186, 186);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+button{
+    cursor: pointer;
+}
+/* ========================back to top btn ======================== */
+#btt{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 1000;
+    background: skyblue;
+    border-radius: .4rem;
+    text-align: center;
+    /* display: none; */
+}
+
+.btt button{
+    padding: 8px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+/* ========================side bar ======================= */
+.sidenav {
+    height: 60vh;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -80vh;
+    background-color: gray;
+    overflow-x: hidden;
+    transition: 1s;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    border-radius: 6px;
+    box-shadow: 0 2px 12px black;
+  }
+  
+  .sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.2s;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  
+  .sidenav a:hover{
+    font-weight: 400;
+    opacity: .3;
+    color: cyan;
+    transition: .9s;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+  }
+  .sidenav .closebtn:hover{
+    font-weight: 400;
+    opacity: .2;
+    color: darkred;
+    transition: .9s;
+  }
+
+  .side-navBtn{
+    width: 100%;
+}
+.side-navBtn .btn{
+    height: 50%;
+    margin: .2rem auto;
+    width: 70%;
+    text-align: center;
+}
+.side-navBtn .btn button{
+    width: 80%;
+    padding: 10px;
+    background: darkblue;
+    margin: .6rem;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-weight: 600;
+}
+.side-icons{
+    width: 100%;
+    height: 4rem;
+}
+.icons{
+    font-size: 24px;
+    height: 80%;
+    margin: .4rem auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.icons a{
+    color: white;
+}
+
+.icons i{
+    margin: .6rem auto;
+    color: blue;
+}
+
+
+
+/* ==========================nav bar start ============================= */
+
+.navContainer{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 30%;
+    height: 80%;
+    margin: 1rem 0;
+}
+
+.logoHead{
+    text-transform: uppercase;
+    height: 40%;
+    text-align: start;
+    width: 100%;
+}
+.logoHead h1{
+    padding: 4px;
+    font-weight: 600;
+    color: darkblue;
+}
+
+.subHead{
+    width: 100%;
+    height: 40%;
+    text-transform: uppercase;
+    text-align: start;
+}
+.subHead h1{
+    font-size: 20px;
+    opacity: .6;
+    margin: 0 .4rem;
+}
+.menuContainer{
+    width: 40%;
+    height: 80%;
+    margin: auto 0;
+}
+
+.menu{
+    height: 50%;
+    margin: 1.4rem auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+
+}
+.menu a{
+    margin: .5rem .2rem;
+    text-decoration: none;
+    color: black;
+}
+.navBtn{
+    width: 20%;
+}
+.navBtn .btn{
+    height: 50%;
+    margin: 1.3rem auto;
+    width: 70%;
+    text-align: center;
+}
+.navBtn .btn button{
+    margin: .5rem 0;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 3rem;
+    background: darkblue;
+    border-radius: .8rem;
+    color: white;
+    overflow: hidden;
+    z-index: 1;
+   }
+   .navBtn .btn button::before{
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 0;
+       height: 100%;
+       background: darkcyan;
+       transition: .5s;
+       color: white;
+       z-index: -1;
+   }
+   .navBtn .btn button:hover::before{
+       width: 100%;
+   }
+
+.open-side{
+    top: 1.6rem;
+    right: 3rem;
+    position: absolute;
+    font-size: 24px;
+    display: none;
+}
+
+.cont-nav{
+    background: darkblue;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid darkblue;
+}
+.cont-nav .cont-container{
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cont-nav .cont-container .contact{
+    color: white;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+.cont-nav .cont-container .contact i{
+    margin: 1rem .2rem;
+    background: green;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding-top: 8px;
+    margin-left: 2rem;
+}
+
+.cont-nav .cont-container .contact span{
+    margin: 1.4rem 0;
+}
+.cont-nav .cont-container .social{
+    color: white;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px; 
+    /* background: yellow; */
+}
+.cont-nav .cont-container .social a{
+    color: white;
+}
+.cont-nav .cont-container .social i{
+    margin: 1rem 0;
+    font-size: 24px;
+}
+
+
+/* ======================== nav end ====================== */
+
+#teacher , #blog , #about{
+    height: 100vh;
+}
+
+#home{
+    width: 100%;
+}
+/* ============slide show ================== */
+.mySlides {display: none;
+    height: 100%;  
+    transition: .5s;     
+}
+img {vertical-align: middle;;
+    width: 100%;
+}
+
+.slide-show{
+    height: 100vh;
+    width: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    z-index: 1000;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* =======================home content ========================== */
+
+.home-content{
+    width: 80%;
+    font-family: 'open sans';
+    margin: 1rem auto;
+}
+
+.home-content h2{
+    margin: 1rem 0;
+}
+
+.home-content p{
+    font-size: 18.08px;
+}
+.home-content h2 span{
+    margin: 1rem 0;
+    color: darkblue;
+}
+.home-content button{
+    margin: 1.7rem 0;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 3rem;
+    background: darkblue;
+    border-radius: .8rem;
+    color: white;
+    overflow: hidden;
+    z-index: 1;
+}
+.home-content button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: darkcyan;
+    transition: .5s;
+    color: white;
+    z-index: -1;
+}
+.home-content button:hover::before{
+    width: 100%;
+}
+.program{
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+}
+.program .design{
+    display: flex;
+    width: 100%;
+    /* background: skyblue; */
+    justify-content: center;
+    margin: 2rem auto;
+}
+.program h1{
+    color: darkblue;
+    font-size: 30px;
+}
+
+.program .pro-card-container{
+    width: 100%;
+    /* background: skyblue; */
+    display: grid;
+    grid-template-columns: repeat(3 , 2fr);
+    /* align-content: center; */
+
+}
+
+.program .pro-card-container .card{
+    width: 60%;
+    background: gray;
+    margin: 1rem auto;
+    display: inline-block;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px black;
+}
+
+.pro-card-container .card .card-img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pro-card-container .card .card-img img{
+    width: 100%;
+    margin: 0 auto;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.pro-card-container .card .card-head{
+    margin: .7rem auto;
+}
+.pro-card-container .card .card-desc{
+    width: 80%;
+    margin: .8rem auto;
+    /* background: blue; */
+    font-size: 1.3rem;
+}
+
+.pro-card-container .card .card-btn{
+    width: 80%;
+    /* background: white; */
+    margin: 0 auto;
+}
+.pro-card-container .card .card-btn button{
+    margin: 1rem 0;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 3rem;
+    background: darkblue;
+    border-radius: .8rem;
+    color: white;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+.pro-card-container .card .card-btn button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: darkcyan;
+    transition: .5s;
+    color: white;
+    z-index: -1;
+}
+.pro-card-container .card .card-btn button:hover::before{
+    width: 100%;
+}
+
+.style{
+    width: 20%;
+    height: 3px;
+    background: darkblue;
+    margin: .9rem 1rem;
+    text-align: end;
+    display: flex;
+    justify-content: space-around;
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    background: darkblue;
+    border-radius: 50%;
+    margin: -.5rem;
+    
+}
+.style2{
+    width: 20%;
+    height: 3px;
+    background: darkblue;
+    margin: .9rem 1rem;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* ----------------------footer ------------------------- */
+footer{
+    width: 100%;
+    /* height: 50vh; */
+    bottom: 0;
+    background: rgb(2, 2, 71);
+    display: inline-blockx;
+    justify-content: center;
+    color: white;
+}
+
+.footer-container{
+    width: 95%;
+    margin: 2rem auto;
+    /* background: yellow; */
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    text-transform: uppercase;
+}
+
+.footer-container .f-contact{
+    /* background: red; */
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.f-contact-social{
+    display: flex;
+    /* background: green; */
+    margin: .7rem auto;
+    /* text-align: center; */
+}
+
+.f-contact-cont{
+    /* margin: 1rem auto; */
+    width: 95%;
+}
+.f-contact-cont ul{
+    list-style: none;
+}
+
+.f-contact-cont ul li{
+    margin: .5rem 0;
+}
+.f-contact-cont ul li i{
+    margin: 0 .3rem;
+}
+
+.f-contact-social a{
+    border: 1px solid white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px;
+    margin: 0 .3rem;
+    color: white;
+}
+.f-course{
+    margin: 1rem auto;
+    width: 95%;
+    /* background: green; */
+}
+.f-course ul{
+    list-style: square;
+}
+
+.f-course ul li{
+    margin: .5rem 0;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+.f-links{
+    margin: 1rem auto;
+    width: 95%;
+    /* background: green; */
+}
+.f-links ul{
+    list-style: square;
+}
+
+.f-links ul li{
+    margin: .5rem 0;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.f-links a{
+    color: white;
+}
+
+footer .final{
+    width: 95%;
+    /* background: red; */
+    margin: 0 auto;
+    padding: 8px;
+    text-align: center;
+}
+footer .final a{
+    color: skyblue;
+}
+
+.f-course a{
+    color: white;
+}
+
+
+
+/* <----------------------responsive---------------------------------------- */
+
+@media screen AND (max-width: 1125px) {
+    .open-side{
+        display: block;
+    }
+    .menu{
+        display: none;
+    
+    }
+    .navBtn{
+        display: none;
+    }
+    .logo{
+        width: 50%;
+        height: 80%;
+        margin: .8rem 0;
+    }
+    .cont-nav{
+    display: none;
+}
+.program .pro-card-container{
+    display: grid;
+    grid-template-columns: repeat(2 , 2fr);
+}
+}
+@media screen AND (max-width: 700px) {
+    .logo{
+        width: 40%;
+    }
+    .program .pro-card-container{
+        display: grid;
+        grid-template-columns: repeat(1 , 2fr);
+    }
+    .footer-container{
+        width: 95%;
+        margin: 2rem auto;
+        /* background: yellow; */
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 15px;
+    }
+}
+@media screen AND (max-width: 560px) {
+    .logo{
+        width: 80%;
+    }
+    .footer-container{
+        width: 95%;
+        margin: 2rem auto;
+        /* background: yellow; */
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 15px;
+    }
+    .f-contact-social a{
+        margin: 0 auto;
+    }
+}
+
+@media screen AND (max-width: 340px) {
+    .logo{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(1,2fr);
+    }
+    .sidenav {
+        right: -100vh;
+        width: 240px;
+        height: 100vh;
+      }
+}
